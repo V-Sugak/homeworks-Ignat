@@ -1,3 +1,38 @@
-.someClass {
+.button {
+    background: slategray;
+    margin: 5px;
+    width: 50px;
+    outline: none;
+}
 
+.button:focus {
+    outline: slategray solid 3px;
+}
+
+.button:active {
+    outline: none;
+}
+
+.active {
+    background: royalblue;
+}
+
+.affair {
+    display: flex;
+}
+
+.item {
+    width: 120px;
+}
+
+.high {
+    color: green;
+}
+
+.middle {
+    color: yellow;
+}
+
+.low {
+    color: red;
 }

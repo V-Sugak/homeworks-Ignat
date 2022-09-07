@@ -1,7 +1,33 @@
-.someClass {
+.greeting {
+    display: flex;
+    align-items: flex-start;
+}
 
+.input {
+    background: skyblue;
+    border: 2px solid darkblue;
+    color: darkblue;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.errorInput {
+    border: 1px solid red;
+    background: skyblue;
+    color: darkblue;
 }
 
 .error {
-    border: 1px solid red;
+    color: red;
+    height: 20px;
+}
+
+.button {
+    margin: 3px 10px;
+    width: 50px;
+    background: skyblue;
+    color: darkblue;
+    outline: none;
 }

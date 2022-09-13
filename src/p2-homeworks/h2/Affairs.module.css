@@ -1,7 +1,5 @@
 .button {
     background: slategray;
-    margin: 5px;
-    width: 50px;
     outline: none;
 }
 
@@ -23,6 +21,7 @@
 
 .item {
     width: 120px;
+    padding-right: 12px;
 }
 
 .high {
@@ -30,7 +29,7 @@
 }
 
 .middle {
-    color: yellow;
+    color: darkgoldenrod;
 }
 
 .low {

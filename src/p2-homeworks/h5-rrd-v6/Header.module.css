@@ -1,0 +1,35 @@
+.link {
+    text-decoration: none;
+    margin: 10px;
+    color: #002fed;
+}
+
+.link:hover {
+    color: deeppink;
+}
+
+.active {
+    text-decoration: none;
+    margin: 10px;
+    color: darkviolet;
+}
+
+.block {
+    width: 21px;
+    height: 21px;
+    margin: 10px;
+    background-color: darkviolet;
+}
+
+.header {
+    display: flex;
+    width: 280px;
+
+    transition-duration: 500ms;
+    transform: translate(-220px);
+}
+
+.header:hover {
+    transition-duration: 500ms;
+    transform: translate(0);
+}

@@ -1,0 +1,9 @@
+.doubleRange{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.span{
+    margin: 0 5px;
+}

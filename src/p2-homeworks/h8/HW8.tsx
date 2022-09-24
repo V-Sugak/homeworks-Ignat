@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import {checkAC, homeWorkReducer, PersonType, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './HW8.module.css'
+import style from './../h12/HW12.module.css'
+import {useSelector} from "react-redux";
+import {AppStateType} from "../h10/bll/store";
+import {ThemeType} from "../h12/bll/themeReducer";
 
 // export type UserType =
 
@@ -16,10 +20,11 @@ export const initialPeople = [
 
 function HW8() {
     const [people, setPeople] = useState<PersonType[]>(initialPeople) // need to fix any
+    const theme = useSelector<AppStateType, ThemeType>(state => state.theme.theme);
 
     // need to fix any
     const finalPeople = people.map((p: PersonType) => (
-        <div key={p._id} className={s.person} >
+        <div key={p._id} className={s.person}>
             <div className={s.name}>{p.name}</div>
             <div className={s.age}>{p.age}</div>
         </div>
@@ -30,11 +35,11 @@ function HW8() {
     const checkAge = () => setPeople(homeWorkReducer(people, checkAC(18)))
 
     return (
-        <div>
+        <div className={style[theme]}>
             <hr/>
             homeworks 8
             {/*should work (должно работать)*/}
-            <div className={s.block}>
+            <div className={s.block + ' ' + style[theme + '-text']}>
                 <div className={s.peopleBlock}>
                     {finalPeople}
                 </div>

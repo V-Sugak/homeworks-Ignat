@@ -2,7 +2,7 @@ const initState: StateType = {
     theme: 'some'
 };
 
-export const themeReducer = (state: StateType = initState, action: ActionsType): StateType => { // fix any
+export const themeReducer = (state: StateType = initState, action: ThemeActionsType): StateType => { // fix any
     switch (action.type) {
         case "CHANGE-THEME": {
             return {...state, theme: action.theme};
@@ -21,4 +21,4 @@ export type ThemeType = 'dark' | 'red' | 'some'| 'blue'
 type StateType = {
     theme: ThemeType
 }
-type ActionsType = ReturnType<typeof changeThemeAC>
+export type ThemeActionsType = ReturnType<typeof changeThemeAC>

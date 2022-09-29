@@ -2,7 +2,8 @@ import React, {ChangeEvent, useState} from 'react'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import s from './HW4.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
-import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
+import SuperCheckbox from "./common/c3-SuperCheckboxNew/SuperCheckbox";
+
 
 function HW4() {
     const [text, setText] = useState<string>('')
@@ -59,12 +60,13 @@ function HW4() {
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
-                >
-                    some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
+                    id={'1'}
+                    children={'some text'}
+               / >
+
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox id={'2'} checked={checked} onChange={testOnChange}/>
             </div>
 
             <hr/>
